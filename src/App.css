@@ -1,12 +1,11 @@
-* {
+/** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
 body {
   font-family: inter;
-  width: 80%;
   margin: 0 auto;
   background: rgb(251, 254, 255);
 }
@@ -16,6 +15,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+}
+
+.news-box {
+  margin: 0px 100px 0 100px;
 }
 
 .news {

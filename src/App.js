@@ -1,14 +1,21 @@
 import React, { createContext, useEffect, useState } from "react";
-import axios from "axios";
 import { NewsContextProvider } from "./NewsContext";
 import News from "./components/News";
 import "./App.css";
+import Navbar from "./components/Navbar.js"
 
 function App() {
   return (
-    <NewsContextProvider>
-      <News />
-    </NewsContextProvider>
+    <div>
+      <Navbar />
+      <NewsContextProvider>
+        <div className = "news-box">
+          <News />
+        </div>
+
+      </NewsContextProvider>
+    </div>
+
   );
 }
 
