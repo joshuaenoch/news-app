@@ -1,21 +1,21 @@
-import React, { createContext, useEffect, useState } from "react";
-import { NewsContextProvider } from "./NewsContext";
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
 import News from "./components/News";
-import "./App.css";
-import Navbar from "./components/Navbar.js"
+import { NewsContextProvider } from './NewsContext';
+import "./App.css"
 
 function App() {
+  const [category, setCategory] = useState('');
+
   return (
     <div>
-      <Navbar />
-      <NewsContextProvider>
-        <div className = "news-box">
-          <News />
-        </div>
-
+      <Navbar setCategory={setCategory} />
+        <NewsContextProvider category={category}>
+          <div className = "news-box">
+            <News />
+          </div>
       </NewsContextProvider>
     </div>
-
   );
 }
 
