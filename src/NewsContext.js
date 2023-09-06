@@ -10,15 +10,15 @@ export const NewsContextProvider = (props) => {
   useEffect(() => {
     axios
       .get(
-        axios.get(`https://newsapi.org/v2/everything?q=keyword&apiKey=${apiKey}`).then(response => setData(response.data)). catch((error) => console.log(error))
+        axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${apiKey}`).then(response => setData(response.data)).catch((error) => console.log(error))
       )
-    .then((response) => setData(response.data))
-    .catch((error) => console.log(error));
-}, []);
+      .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
 
-return (
-  <NewsContext.Provider value={{ data }}>
-    {props.children}
-  </NewsContext.Provider>
-);
+  return (
+    <NewsContext.Provider value={{ data }}>
+      {props.children}
+    </NewsContext.Provider>
+  );
 };
