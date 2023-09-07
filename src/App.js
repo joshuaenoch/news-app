@@ -6,12 +6,12 @@ import "./App.css"
 
 function App() {
   const [category, setCategory] = useState('');
-  const [searchQuery, setSearchQuery] = useState("");
+  const [search, setSearch] = useState('');
 
   return (
     <div>
-      <Navbar setCategory={setCategory} />
-      <NewsContextProvider category={category} setSearchQuery={setSearchQuery}>
+      <Navbar setCategory={setCategory} setSearch={setSearch} />
+      <NewsContextProvider category={category} search={search}>
         <div className="news-box">
           <News />
         </div>
