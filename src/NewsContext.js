@@ -15,9 +15,10 @@ export const NewsContextProvider = (props) => {
         .get(`https://newsapi.org/v2/everything?q=${search}&from=2023-08-07&sortBy=publishedAt&apiKey=${apiKey}`)
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
-      console.log(search);
+
     } else {
       // Call a different axios.get request when search is empty
+
       axios
         .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`)
         .then((response) => setData(response.data))
