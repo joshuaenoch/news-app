@@ -12,7 +12,7 @@ export const NewsContextProvider = (props) => {
   useEffect(() => {
 
     axios
-      .get(`https://newsapi.org/v2/top-headlines?q=${search}country=us&category=${category}&apiKey=${apiKey}`)
+      .get(`https://newsapi.org/v2/top-headlines?q=${search}&country=us&category=${category}&apiKey=${apiKey}`)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
   }, [category, search]); // Add category and search as dependencies
