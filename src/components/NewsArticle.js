@@ -1,6 +1,9 @@
 import React from "react";
 
 function NewsArticle({ data }) {
+  if (data.title === "[Removed]") {
+    return null; // Don't render anything if the title is "[Removed]"
+  }
   return (
     <div className="news">
       <a href={data.url}>

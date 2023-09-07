@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Navbar setCategory={setCategory} setSearch={setSearch} />
-      <NewsContextProvider category={category} search={search}>
+      <NewsContextProvider category={category} search={search} >
         <div className="news-box">
           <News />
         </div>
