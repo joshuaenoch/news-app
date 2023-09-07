@@ -15,13 +15,13 @@ function Navbar({ setCategory, setSearch }) {
   return (
     <nav className="navbar">
       <ul className='types'>
-        <li onClick={() => {setCategory(""); setSearch("");}}>Top Headlines</li>
-        <li onClick={() => {setCategory("business"); setSearch("");}}>Business</li>
-        <li onClick={() => {setCategory("entertainment"); setSearch("");}}>Entertainment</li>
-        <li onClick={() => {setCategory("health"); setSearch("");}}>General Health</li>
-        <li onClick={() => {setCategory("science"); setSearch("");}}>Science</li>
-        <li onClick={() => {setCategory("sports"); setSearch("");}}>Sports</li>
-        <li onClick={() => {setCategory("technology"); setSearch("");}}>Technology</li>
+        <li onClick={() => setCategory("")}>Top Headlines</li>
+        <li onClick={() => setCategory("business")}>Business</li>
+        <li onClick={() => setCategory("entertainment")}>Entertainment</li>
+        <li onClick={() => setCategory("health")}>General Health</li>
+        <li onClick={() => setCategory("science")}>Science</li>
+        <li onClick={() => setCategory("sports")}>Sports</li>
+        <li onClick={() => setCategory("technology")}>Technology</li>
         <li>
           <input
             type="text"
