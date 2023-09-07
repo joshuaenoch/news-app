@@ -18,7 +18,6 @@ function Navbar({ setCategory, setSearchQuery }) {
     };
 
 
-
     return (
         <nav className="navbar">
             <ul className='types'>
