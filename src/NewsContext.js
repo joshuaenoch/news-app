@@ -10,19 +10,9 @@ export const NewsContextProvider = (props) => {
   const { category, search } = props; // Access the category and search props
 
   useEffect(() => {
-    if (search) { // Check if search has a value
-      axios
-        .get(`https://newsapi.org/v2/everything?q=${search}&from=2023-08-07&sortBy=publishedAt&apiKey=${apiKey}`)
+      axios.get(`https://newsapi.org/v2/top-headlines?q=${search}&country=us&category=${category}&apiKey=${apiKey}`)
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
-      console.log(search);
-    } else {
-      // Call a different axios.get request when search is empty
-      axios
-        .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`)
-        .then((response) => setData(response.data))
-        .catch((error) => console.log(error));
-    }
   }, [category, search]); // Add category and search as dependencies
 
   return (
