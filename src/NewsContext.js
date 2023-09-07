@@ -12,7 +12,7 @@ export const NewsContextProvider = (props) => {
   useEffect(() => {
     if (search) { // Check if search has a value
       axios
-        .get(`https://newsapi.org/v2/everything?q=${search}&from=2023-08-07&sortBy=publishedAt&apiKey=${apiKey}`)
+        .get(`https://newsapi.org/v2/everything?q=${search}&pageSize=100&apiKey=${apiKey}`)
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
 
@@ -20,7 +20,7 @@ export const NewsContextProvider = (props) => {
       // Call a different axios.get request when search is empty
 
       axios
-        .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`)
+        .get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=100&apiKey=${apiKey}`)
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
     }
