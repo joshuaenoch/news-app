@@ -6,9 +6,9 @@ function NewsArticle({ data }) {
   }
   return (
     <div className="news">
-      <img src={data.urlToImage} alt={"No image found"} className="news__image" />
+      <img src={data.urlToImage} alt={""} className="news__image" />
       <div className="article-info">
-        <a href={data.url} target="_blank">
+        <a href={data.url} target="_blank" rel="noopener noreferrer">
           <p className="news__title">{data.title}</p>
         </a >
         <p className="news__desc">{data.description}</p>
