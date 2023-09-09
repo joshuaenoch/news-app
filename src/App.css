@@ -1,18 +1,15 @@
 /** {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  
 }*/
 
 body {
   font-family: inter;
   margin: 0 auto;
-  background: rgb(251, 254, 255);
+  background: white;
 }
 
 .all__news {
   margin: 50px auto;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
@@ -21,20 +18,31 @@ body {
   margin: 0px 100px 0 100px;
 }
 
+
 .news {
-  max-width: 500px;
   padding: 30px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  background-color: white;
+}
+
+.news:hover {
+  background: lightgrey;
+  /* make this whatever you want */
 }
 
 .news__image {
   max-height: 200px;
+  max-width: 350px;
 }
 
 .news__title {
+  font-size: 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
+  color: rgb(64, 64, 64);
 }
 
 .head__text {
@@ -44,13 +52,12 @@ body {
 .news__desc {
   padding-top: 10px;
   line-height: 25px;
-  font-size: 14px;
+  font-size: 20px;
   padding-bottom: 10px;
 }
 
 .news__author {
   margin-right: 10px;
-  color: purple;
 }
 
 .news__published {
@@ -62,4 +69,8 @@ body {
   display: inline-block;
   margin-top: 10px;
   color: rgb(122, 122, 122);
+}
+
+.article-info {
+  margin-left: 30px;
 }
