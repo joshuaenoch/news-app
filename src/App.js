@@ -9,14 +9,15 @@ function App() {
   const [category, setCategory] = useState('');
   const [search, setSearch] = useState('');
   const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [language, setLanguage] = useState('');
 
   return (
     <div>
-      <Navbar setCategory={setCategory} setSearch={setSearch} />
+      <Navbar setCategory={setCategory} setSearch={setSearch}/>
       <div className="body-container">
-        <Sidebar startDate={setStartDate} language={setLanguage} />
-        < NewsContextProvider category={category} search={search}>
+        <Sidebar setStartDate={setStartDate} setEndDate={setEndDate} setLanguage={setLanguage}/>
+        < NewsContextProvider category={category} search={search} startDate={startDate} endDate={endDate} language={language}>
           <div className="news-box">
             <News />
           </div>
