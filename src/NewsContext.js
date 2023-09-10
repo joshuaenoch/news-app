@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import Sidebar from "./components/Sidebar";
 
 export const NewsContext = createContext();
 

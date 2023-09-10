@@ -6,15 +6,15 @@ function NewsArticle({ data }) {
   }
   return (
     <div className="news">
-      <img src={data.urlToImage} alt={""} className="news__image" />
+      <img src={data.urlToImage} alt={""} className="news-image" />
       <div className="article-info">
         <a href={data.url} target="_blank" rel="noopener noreferrer">
-          <p className="news__title">{data.title}</p>
+          <p className="news-title">{data.title}</p>
         </a >
-        <p className="news__desc">{data.description}</p>
-        <span className="news__author">{data.author}</span>
-        <span className="news__published">{data.publishedAt}</span>
-        <span className="news__source"><strong>{data.source.name}</strong></span>
+        <p className="news-desc">{data.description}</p>
+        <span className="news-author">{data.author}</span>
+        <span className="news-published">{data.publishedAt}</span>
+        <span className="news-source"><strong>{data.source.name}</strong></span>
       </div>
     </div >
   );

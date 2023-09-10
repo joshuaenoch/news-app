@@ -8,7 +8,7 @@ body {
   background: white;
 }
 
-.all__news {
+.all-news {
   margin: 50px auto;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -33,39 +33,39 @@ body {
   /* make this whatever you want */
 }
 
-.news__image {
+.news-image {
   max-height: 200px;
   max-width: 350px;
 }
 
-.news__title {
+.news-title {
   font-size: 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
   color: rgb(64, 64, 64);
 }
 
-.head__text {
+.head-text {
   margin-top: 30px;
 }
 
-.news__desc {
+.news-desc {
   padding-top: 10px;
   line-height: 25px;
   font-size: 20px;
   padding-bottom: 10px;
 }
 
-.news__author {
+.news-author {
   margin-right: 10px;
 }
 
-.news__published {
+.news-published {
   margin-right: 10px;
 }
 
-.news__source,
-.news__published {
+.news-source,
+.news-published {
   display: inline-block;
   margin-top: 10px;
   color: rgb(122, 122, 122);
@@ -73,4 +73,17 @@ body {
 
 .article-info {
   margin-left: 30px;
+}
+
+.body-container {
+  display: flex;
+}
+
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  min-height: 100vh;
+  background-color: rgb(41, 41, 41);
 }

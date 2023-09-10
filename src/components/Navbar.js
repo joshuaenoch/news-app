@@ -22,7 +22,7 @@ function Navbar({ setCategory, setSearch }) {
         <li onClick={() => { setCategory("science"); setSearch(""); }}>Science</li>
         <li onClick={() => { setCategory("sports"); setSearch(""); }}>Sports</li>
         <li onClick={() => { setCategory("technology"); setSearch(""); }}>Technology</li>
-        <li className = "search-bar">
+        <li className="search-bar">
           <input
             type="text"
             placeholder="Search"
