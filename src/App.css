@@ -74,3 +74,16 @@ body {
 .article-info {
   margin-left: 30px;
 }
+
+.body-container {
+  display: flex;
+}
+
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  min-height: 100vh;
+  background-color: rgb(41, 41, 41);
+}
