@@ -35,11 +35,11 @@ body {
 
 .news-image {
   max-height: 200px;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .news-title {
-  font-size: 30px;
+  font-size: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
   color: rgb(64, 64, 64);
@@ -50,10 +50,9 @@ body {
 }
 
 .news-desc {
-  padding-top: 10px;
   line-height: 25px;
-  font-size: 20px;
-  padding-bottom: 10px;
+  font-size: 15px;
+  padding-bottom: 5px;
 }
 
 .news-author {
@@ -67,7 +66,6 @@ body {
 .news-source,
 .news-published {
   display: inline-block;
-  margin-top: 10px;
   color: rgb(122, 122, 122);
 }
 
